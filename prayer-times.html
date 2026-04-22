@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prayer Times | Lozells Central Mosque</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header" role="banner">
+      <div class="brand-wrap">
+        <div class="brand-row">
+          <h1 class="site-title">Lozells Central Mosque</h1>
+          <img class="site-badge" src="assets/lozells-logo.svg" alt="Lozells Central Mosque badge" />
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li><li><a href="prayer-times.html">Prayer Times</a></li><li><a href="events.html">Events</a></li><li><a href="announcements.html">Announcements</a></li><li><a href="funerals.html">Funeral Notices</a></li><li><a href="sermons.html">Sermons</a></li><li><a href="radio.html">Mosque Radio</a></li><li><a href="donations.html">Donations</a></li><li><a href="feedback.html">Feedback</a></li><li><a href="admin.html">Admin</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main id="main-content" class="layout">
+      <section class="card">
+        <h2>Daily Prayer Times</h2>
+        <p class="helper">Automatically highlights the active prayer and next prayer.</p>
+        <div id="prayer-status" aria-live="polite" class="status-box"></div>
+        <table>
+          <caption>Today’s Salah and Jumu’ah timetable</caption>
+          <thead><tr><th scope="col">Prayer</th><th scope="col">Time</th></tr></thead>
+          <tbody id="prayer-table"></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>

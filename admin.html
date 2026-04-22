@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Dashboard | Lozells Central Mosque</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand-wrap">
+        <div class="brand-row">
+          <h1 class="site-title">Lozells Central Mosque</h1>
+          <img class="site-badge" src="assets/lozells-logo.svg" alt="Lozells Central Mosque badge" />
+        </div>
+        <p class="tagline">Admin Dashboard: manage timetable, announcements, funerals, and events</p>
+      </div>
+      <nav aria-label="Admin links">
+        <ul>
+          <li><a href="index.html">Community View</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="layout">
+      <section class="card">
+        <h2>Authentication</h2>
+        <p>Demo access code: <strong>mosque-admin</strong></p>
+        <form id="auth-form" class="stacked-form">
+          <label for="admin-code">Access code</label>
+          <input id="admin-code" type="password" required />
+          <button type="submit">Unlock admin tools</button>
+        </form>
+        <p id="auth-status" aria-live="polite"></p>
+      </section>
+
+      <section class="card" id="admin-tools" hidden>
+        <h2>Content Management</h2>
+        <form id="admin-form" class="stacked-form">
+          <label for="content-type">Content type</label>
+          <select id="content-type" required>
+            <option value="">Select content type</option>
+            <option value="events">Event</option>
+            <option value="announcements">Announcement</option>
+            <option value="funerals">Funeral notice</option>
+            <option value="sermons">Sermon</option>
+          </select>
+
+          <label for="content-title">Title</label>
+          <input id="content-title" required />
+
+          <label for="content-details">Details</label>
+          <textarea id="content-details" rows="3" required></textarea>
+          <button type="submit">Publish update</button>
+        </form>
+      </section>
+
+      <section class="card" id="prayer-editor" hidden>
+        <h2>Prayer Timetable Editor</h2>
+        <form id="prayer-form" class="stacked-form">
+          <label for="prayer-name">Prayer</label>
+          <select id="prayer-name" required>
+            <option>Fajr</option>
+            <option>Dhuhr</option>
+            <option>Asr</option>
+            <option>Maghrib</option>
+            <option>Isha</option>
+            <option>Jumu'ah</option>
+          </select>
+
+          <label for="prayer-time">Time</label>
+          <input id="prayer-time" type="time" required />
+
+          <button type="submit">Save prayer time</button>
+        </form>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

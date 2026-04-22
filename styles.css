@@ -1,0 +1,246 @@
+:root {
+  color-scheme: light;
+  --bg: #e9edf3;
+  --bg-deep: #1c3f73;
+  --card: rgba(255, 255, 255, 0.9);
+  --accent: #0b2f66;
+  --accent-soft: #1451a6;
+  --text: #16202a;
+  --muted: #4f6274;
+  --border: rgba(189, 203, 219, 0.7);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  line-height: 1.45;
+  background-color: #e7ecf5;
+  background-image:
+    radial-gradient(circle at 8% 12%, rgba(45, 114, 255, 0.32), transparent 30%),
+    radial-gradient(circle at 92% 0%, rgba(10, 39, 88, 0.4), transparent 36%),
+    radial-gradient(circle at 50% 100%, rgba(107, 173, 255, 0.24), transparent 40%),
+    linear-gradient(155deg, #f7faff 0%, #e8effb 52%, #dbe6f6 100%);
+  background-attachment: fixed;
+}
+
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 8px;
+  background: var(--accent);
+  color: white;
+  padding: 8px;
+  z-index: 20;
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.site-header {
+  background:
+    linear-gradient(100deg, rgba(11, 47, 102, 0.97) 0%, rgba(14, 73, 145, 0.95) 45%, rgba(9, 38, 85, 0.95) 100%);
+  color: white;
+  padding: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 30px rgba(4, 26, 53, 0.28);
+}
+
+.brand-wrap {
+  display: grid;
+  gap: 0.55rem;
+  align-items: start;
+}
+
+.brand-row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.85rem;
+}
+
+.site-badge {
+  display: block;
+  width: 148px;
+  height: auto;
+  background: #e8e8e8;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 0.2rem;
+  flex-shrink: 0;
+}
+
+.site-title {
+  margin: 0;
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+  text-align: left;
+  flex: 1;
+}
+
+.tagline {
+  color: #dae5f7;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+nav a {
+  color: #f4f7fb;
+  font-weight: 600;
+}
+
+.layout {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1.4rem;
+  position: relative;
+  z-index: 0;
+}
+
+.layout::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(120deg, rgba(255, 255, 255, 0.34) 0%, transparent 38%),
+    repeating-linear-gradient(135deg, rgba(255, 255, 255, 0.07) 0 2px, transparent 2px 14px);
+  opacity: 0.55;
+  z-index: -1;
+}
+
+.card {
+  background: linear-gradient(170deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 252, 255, 0.86) 100%);
+  backdrop-filter: blur(5px);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 14px 35px rgba(10, 36, 69, 0.14);
+}
+
+.status-box {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border-radius: 8px;
+  background: linear-gradient(90deg, #e5f2ff 0%, #edf7f8 100%);
+  color: #0a3f7d;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.active-prayer {
+  background: #e2ecfb;
+  font-weight: 700;
+}
+
+.item-list {
+  padding-left: 1rem;
+}
+
+.item-list li {
+  margin-bottom: 0.6rem;
+}
+
+.stacked-form {
+  display: grid;
+  gap: 0.5rem;
+}
+
+input,
+textarea,
+select,
+button {
+  font: inherit;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #aab9c7;
+}
+
+button {
+  background: linear-gradient(130deg, var(--accent) 0%, var(--accent-soft) 100%);
+  color: white;
+  border: 0;
+  cursor: pointer;
+}
+
+button:hover,
+button:focus-visible {
+  opacity: 0.92;
+}
+
+footer {
+  text-align: center;
+  color: #32465d;
+  padding: 1rem;
+}
+
+
+body[data-device="mobile"] .site-header {
+  padding: 0.85rem;
+}
+
+body[data-device="mobile"] nav ul {
+  flex-direction: row;
+  overflow-x: auto;
+  white-space: nowrap;
+  gap: 0.55rem;
+  padding-bottom: 0.2rem;
+}
+
+body[data-device="mobile"] nav a {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.13);
+  border-radius: 999px;
+  padding: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+body[data-device="mobile"] .card {
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+body[data-device="mobile"] table {
+  display: block;
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .layout {
+    padding: 1rem;
+  }
+
+  .brand-row {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .site-badge {
+    width: 100px;
+  }
+}
+
