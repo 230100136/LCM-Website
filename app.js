@@ -13,7 +13,10 @@ const defaultData = {
   ],
   events: [
     { title: "Food Bank", details: "Every Wednesday 1:00 PM - 2:30 PM" },
-    { title: "Thursday Gathering", details: "Every Thursday at 7:30 PM" }
+    { title: "Thursday Gathering", details: "Every Thursday at 7:30 PM" },
+    { title: "Weekly Litter Pick", details: "Every Saturday at 11 AM" },
+    { title: "Daily Quran Classes", details: "Every Weekday from 4:30 to 7:30 PM" },
+    { title: "Daily Islamic Studies Classes", details: "Every Weekday from 7:30 to 8:30 PM" },
   ],
   announcements: [
     {
@@ -25,8 +28,9 @@ const defaultData = {
     { title: "Janazah notice", details: "Brother Ahmed, Janazah after Dhuhr prayer." }
   ],
   sermons: [
-    { title: "Friday Khutbah", details: "Urdu speech" },
-    { title: "Friday Khutbah", details: "English speech" }
+    { title: "Friday Khutbah at 1:00", details: "Urdu speech" },
+    { title: "Friday Khutbah at 2:15", details: "English speech" },
+    { title: "Friday Khutbah at 3:45", details: "English speech" },
   ]
 };
 
