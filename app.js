@@ -4,29 +4,58 @@ const ADMIN_CODE = "mosque-admin";
 
 const defaultData = {
   prayerTimes: [
-    { name: "Fajr", time: "05:45" },
-    { name: "Dhuhr", time: "13:15" },
-    { name: "Asr", time: "16:30" },
-    { name: "Maghrib", time: "18:05" },
-    { name: "Isha", time: "19:30" },
+    { name: "Fajr", time: "05:00" },
+    { name: "Dhuhr", time: "14:00" },
+    { name: "Asr", time: "18:30" },
+    { name: "Maghrib", time: "20:30" },
+    { name: "Isha", time: "22:15" },
     { name: "Jumu'ah", time: "13:30" }
   ],
   events: [
-    { title: "Food Bank", details: "Every Wednesday 1:00 PM - 2:30 PM" },
+    { title: "Food Bank", details: "Every Wednesday at 1:00 PM till 2:30 PM" },
     { title: "Thursday Gathering", details: "Every Thursday at 7:30 PM" },
     { title: "Weekly Litter Pick", details: "Every Saturday at 11 AM" },
     { title: "Daily Quran Classes", details: "Every Weekday from 4:30 to 7:30 PM" },
     { title: "Daily Islamic Studies Classes", details: "Every Weekday from 7:30 to 8:30 PM" },
+    { title: "Upcoming Summer Youth scheme", details: "Will begin in the second week of the summer holidays, taking place across a 4 week period, more details to be released soon" },
+
   ],
   announcements: [
     {
-      title: "Ramadan timetable update",
-      details: "Updated Suhoor and Iftar schedule will be released next week."
-    }
+      title: "Prayer Timetable update",
+      details: "Updated timetable will be released next week."
+    },
+    {
+    title: "Parking restrictions",
+    details: "Please avoid blocking residential driveways during prayer times, JazakAllah."
+  },
+    {
+    title: "Donation appeal",
+    details: "Support the mosque expansion project with your generousity. Donations can be made online or in person."
+  },
+    {
+    title: "Masjid maintenance notice",
+    details: "The mosque will undergo cleaning on Sunday after Fajr. Some areas may be temporarily closed for use."
+  },
+   {
+    title: "New Quran class enrollment",
+    details: "Registrations are now open for children’s Quran classes."
+  },
   ],
-  funerals: [
-    { title: "Janazah notice", details: "Brother Ahmed, Janazah after Dhuhr prayer." }
-  ],
+funerals: [
+  { 
+    title: "Janazah notice", 
+    details: "Brother Ahmed, Janazah after Dhuhr prayer." 
+  },
+  { 
+    title: "Burial notice", 
+    details: "Uncle Raja Naseer, burial at Handsworth Cemetery at 4:00 PM." 
+  },
+  { 
+    title: "Ghusl notice for sisters", 
+    details: "Ghusl for a sister will take place at 1:00 PM." 
+  }
+],
   sermons: [
     { title: "Friday Khutbah at 1:00", details: "Urdu speech" },
     { title: "Friday Khutbah at 2:15", details: "English speech" },
